@@ -1,0 +1,45 @@
+<html></html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        
+        <script>
+           function myfunction()
+           {
+            let a = 2;
+            let b = 3.5;
+            let c = a+b;
+            document.write('The sum is '+c);
+            document.write('<br>');
+            let fname = "Ram";
+            let lname = "Sharma";
+            let fullname = fname + " " + lname;
+            document.write('Hello '+fullname);
+           }
+           myfunction();
+
+           //function with parameter
+           let num1 = 10;
+           let num2 = 20;
+           function sum(a, b)
+           {
+                let sum = a+b;
+                document.write('The sum of '+a+' and '+b+ ' is '+sum);
+           }
+           sum(num1,num2);
+
+           //function with return value
+           function sub(){
+            let a = 5;
+            let b = 2;
+            return (a-b);
+           }
+           
+           document.write('The result from sub function is '+sub());
+
+        </script>
+
+        <noscript>Sorry the script is disabled ! We cannot run any task through Javascript !</noscript>
+    </body>
+</html>
