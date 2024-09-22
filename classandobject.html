@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript class and object</title>
+</head>
+<body>
+    <h1>Class and Object</h1>
+    <script>
+        class person{
+            constructor(name, age)
+            {
+                this.name = name;
+                this.age = age;
+            }
+            greet()
+            {
+                console.log(`Hello, my name is ${this.name} and I am ${this.name} years old.`);
+            }
+        }
+        let person1 = new person("Ram",25);
+        let person2 = new person("Shyam", 22);
+        person1.greet();
+        person2.greet();
+
+        //Also using the properties of rectangle i.e. width and height
+        let rectangle = { width: 10, height: 20};
+        console.log(rectangle.width);
+        console.log(rectangle.height);
+    </script>
+    
+</body>
+</html>

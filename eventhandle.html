@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Event Handling</title>
+        <body>
+            <button id="btn">Click Me</button>
+            <a href="https://www.lict.edu.np" id="link">Lumbini ICT Campus</a>
+            <script>
+                document.getElementById('btn').addEventListener('click', function(event){
+                    alert('You clicked at '+event.offsetX+', '+event.offsetY);
+                });
+                let link = document.getElementById('link');
+                link.addEventListener('click', function(event){
+                    link.style.color = 'red';
+                    event.preventDefault();
+                });
+            </script>
+        </body>
+    </head>
+</html>

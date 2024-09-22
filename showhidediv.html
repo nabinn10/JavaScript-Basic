@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide a Div</title>
+</head>
+<body>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="showhide">Show/Hide</button>
+    <div id="content" style="display: none;">
+        <h1>Content</h1>
+        <p>This is the content to be shown or hidden.</p>
+    </div>
+
+    <script>
+        document.getElementById("show").addEventListener('click', function(event){
+            document.getElementById("content").style.display = "block";
+            document.getElementById("hide").style.display = "inline";
+        });
+
+        document.getElementById("hide").addEventListener('click', function(event){
+            document.getElementById("content").style.display = "none";
+            document.getElementById("show").style.display = "inline";
+        });
+
+        document.getElementById("showhide").addEventListener('click', function(event)
+        {
+
+        
+            var content = document.getElementById("content");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+
+                // document.getElementById("hide").style.display = "inline";
+            } else {
+                content.style.display = "none";
+                // document.getElementById("show").style.display = "inline";
+    
+            }
+        });
+    </script>
+</body>
+</html>

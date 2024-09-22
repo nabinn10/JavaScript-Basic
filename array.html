@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+        console.log(arr);
+        console.log(arr[1]);
+        console.log(arr[3]);
+        console.log(arr[4]);
+        console.log(arr[8]);
+        console.log(arr[11]); // This will log 'undefined' since there is no element at index 11.
+        console.log(arr.length); // length of array
+        console.log(arr.length - 1); // last index
+        console.log(arr[arr.length - 1]); // last element
+
+        // index of an element
+        console.log("The index of 5 is " + arr.indexOf(5));
+
+        let arr2 = ['Apple', 'Ball', 'Pineapple', 'Orange', 'Banana'];
+        
+        // push the element to the end of an array
+        arr2.push('Grapes');
+
+        // ascending order
+        arr2.sort();
+        console.log("Sorting in ascending order: ", arr2);
+
+        // descending order
+        arr2.reverse();
+        console.log("Sorting in descending order: ", arr2);
+
+        // remove an element from the beginning
+        arr2.shift();
+        console.log("Removes an element from the beginning: ", arr2);
+        
+        // remove an element from index 2
+        arr2.splice(2, 1);
+
+        // splice for adding elements
+        arr2.splice(2, 0, 'Papaya', 'Kiwi');
+
+        // array traversal
+        for (let i = 0; i < arr2.length; i++) {
+            console.log(arr2[i]);
+        }
+
+        arr2.forEach(function(fruit) {
+            document.write(fruit + '<br>');
+        });
+
+        let numbers = [1, 2, 3, 4, 5];
+        let squares = numbers.map(myFunction);
+
+        function myFunction(value, index, array) {
+            return value * value;
+        }
+        document.write(squares + '<br>');
+    </script>
+</body>
+
+</html>

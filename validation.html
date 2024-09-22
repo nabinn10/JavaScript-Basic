@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+   input{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+   }
+</style>
+<body>
+    <form action="" onsubmit="return Validate()">
+        <input type="text" placeholder="Enter your name:" id="fullname">
+        <br>
+        <input type="text" placeholder="Enter phone number" id="phone">
+        <br>
+        <input type="text" placeholder="Enter Email" id="username">
+        <br>
+        <input type="password" placeholder="Enter password" id="password">
+        <br>
+        <input type="submit" value="Submit" name="Submit">
+    </form>
+    <script>
+        function Validate() {
+            let name = document.getElementById("fullname").value;
+            let phone = document.getElementById("phone").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Check if any fields are empty
+            if (name === "" || phone === "" || username === "" || password === "") {
+                alert("Enter the missing value");
+                return false;
+            }
+
+            // Phone number must be numeric
+            if (isNaN(phone)) {
+                alert("Phone number must be numeric");
+                return false;
+            }
+
+            // Check if the username and password are the same
+            if (username === password) {
+                alert("Username and password cannot be the same");
+                return false;
+            }
+
+            // Check password length
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false;
+            }
+
+            // Check if the name starts with a letter
+            if (!isNaN(name.charAt(0))) {
+                alert("Name must start with a letter");
+                return false;
+            }
+
+            // If all validations pass
+            return true;
+        }
+    </script>
+</body>
+</html>

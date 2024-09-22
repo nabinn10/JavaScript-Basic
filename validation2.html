@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation with regular expression
+    </title>
+    <style>
+        input {
+            display: block;
+            margin: 10;
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" onsubmit="return validate()">
+        <!-- <input type="text" placeholder="Enter your name:" id="fullname">
+        <br> -->
+        <input type="text" placeholder="Enter Email" id="email">
+        <br>
+        <input type="text" placeholder="Enter phone number" id="phone">
+        <br>
+        <input type="password" placeholder="Enter password" id="password">
+        <br>
+        <input type="password" placeholder="Confirm password" id="confirm_password">
+        <br>
+        <input type="submit" value="Register" name="Submit">
+    </form>
+    <script>
+        function validate() {
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let password = document.getElementById('password').value;
+            let confirm_password = document.getElementById('confirm_password').value;
+
+            //phone must start with 98 or 97 and must be 10 digit long
+            let phone_regex = /^98|97\d{8}$/;
+
+            let checkphone = phone_regex.test(phone);
+            if (!checkphone) {
+                alert("Invalid phone number");
+                return false;
+            }
+
+            //email must contain @
+            //for fixed number of character
+            // let emailpattern = /^[^\s@]{3,15}@[^\s@]+\.[^\s@]+$/;
+            let emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let checkemail = emailpattern.test(email);
+            if (!checkemail) {
+                alert("Invalid email");
+                return false;
+
+            }
+            //password must contain one upper case one lower and one number with total 8 character 
+            // let password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).
+        
+    </script>
+
+</body>
+
+</html>

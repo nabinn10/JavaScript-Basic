@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="clock"></h2>
+    <script>
+function updateClock()
+{
+    let clock = document.getElementById('clock');
+        let today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+
+        let time = check(h) + ":" +check(m)+ ":"+check(s);
+
+        clock.innerHTML = time;
+
+}
+        function check(x)
+        {
+            if (x<10)
+        {
+            x = '0'+x;
+        }
+        return x;
+        }
+        setInterval(updateClock,1000);
+    </script>
+</body>
+</html>

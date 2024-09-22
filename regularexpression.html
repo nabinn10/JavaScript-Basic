@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str ="Visit W3Schools";
+        var patt = /w3schools/i;
+        var result = str.match(patt);
+        document.write(result);
+        //match method return an array if it finda a match, otherwise it returns null
+        var result = str.search(patt);
+        document.write(result);
+        //search method returns the position of the match
+        var result = patt.test(str);
+        document.write(result);
+        //test method returns true if it finds a match, otherwise it return false
+    </script>
+</body>
+</html>

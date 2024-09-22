@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="fname">Nabin</h2>
+    <br>
+    <input type="number" name="" id="age" placeholder="Enter your age">
+    <button onclick="getValue()">Submit</button>
+
+    <!-- control Structure 
+     conditional statement
+     if else , switch;
+
+     
+     Loop Statement
+     for, do while, for in , for each
+
+     Jump Statememnt
+     break, continue, return;
+     -->
+
+    <script>
+        let fname = document.getElementById('fname').innerHTML;
+        document.getElementById('fname').innerHTML = "Hello " + fname;
+        // console.log(fname);
+
+        function getValue() {
+            let age = document.getElementById('age').value;
+            document.getElementById('fname').innerHTML = fname + ' is ' + age + " years old";
+        }
+    </script>
+</body>
+
+</html>

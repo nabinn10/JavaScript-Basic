@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" name="" id="num" placeholder="Enter a number">
+    <button onclick="getValue()">Submit</button>
+    <h2 id="text">Number to be check</h2>
+    <Script>
+        function getValue() {
+            let num = document.getElementById('num').value;
+            if (num % 2 == 0) {
+                document.getElementById('text').innerHTML = "The number " + num + " is even";
+            }
+            else {
+                document.getElementById('text').innerHTML = "The number " + num + " is odd";
+            }
+        }
+
+    </Script>
+</body>
+
+</html>

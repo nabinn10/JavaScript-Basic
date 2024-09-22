@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        input {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <input type="text" name="name" placeholder="Enter your name" id="name">
+        <input type="text" name="email" placeholder="Enter your Email" id="email">
+        <input type="password" name="password" placeholder="Enter password" id="password">
+        <input type="password" name="cpassword" placeholder="Confirm password" id="cpassword">
+        <input type="text" name="phone" placeholder="Enter phone number" id="phone">
+        <label>
+            <input type="checkbox" name="terms" id="terms"> Accept terms and conditions
+        </label>
+        <input type="submit" value="Submit" name="Submit">
+    </form>
+    <script>
+        function validate() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let password = document.getElementById('password').value;
+            let cpassword = document.getElementById('cpassword').value;
+            let terms = document.getElementById('terms').checked;
+
+            // Check if all fields are filled
+            if (name === "" || email === "" || phone === "" || password === "" || cpassword === "" || !terms) {
+                alert("All fields are required");
+                return false;
+            }
+
+            // Name must be at least 8 characters long
+            if (name.length < 8) {
+                alert("Name must be at least 8 characters long");
+                return false;
+            }
+
+            // Valid email address
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Password and confirm password must match
+            if (password !== cpassword) {
+                alert("Password and confirm password do not match");
+                return false;
+            }
+
+            // Phone number must be 10 digits
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must be 10 digits long");
+                return false;
+            }
+ 
+            // If all validations pass, allow form submission
+            return true;
+        }
+    </script>
+</body>
+</html>

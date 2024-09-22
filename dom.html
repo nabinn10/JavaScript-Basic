@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2>Select the fruits</h2>
+    <br>
+    Mango
+    <input type="radio" name="fruits" value="mango">
+    <br>
+    Apple <input type="radio" name="fruits" value="apple">
+    <br><br>
+    <button onclick="displayFruits()">Display Fruit</button>
+
+    <script>
+        function displayFruits() {
+            let fruits = document.getElementsByName('fruits');
+            if(fruits[0].checked){
+                alert("You have selected mango");
+            }
+            else if(fruits[1].checked){
+                alert("You have selected apple");
+            }
+            else{
+                alert("You have not selected any fruit");
+            }
+        }
+    </script>
+</body>
+</html>

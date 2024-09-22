@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+
+       function first()
+       {
+        //var ko value change huna sakxa
+        //let ko case ma chai eauta block vitra eautai hunxa, arko ma arkai,
+        // let a = 4;
+        // let b= 3;
+        // let c = a+b;
+        var a = 4;
+        var b= 2;
+        var c = a+b;
+        document.write("The sum is "+c);
+        document.write("<br>");
+        let fname = "Nabin";
+        let lname = "Poudel";
+        document.write("Hello " + fname +" "+ lname);
+       }
+       first();
+
+
+       //function with parameter:
+       document.write("<br>");
+       let num1 = 2;
+       let num2 = 10;
+       function SUM(a,b){
+        let sum = a+b;
+        document.write("The sum of "+a+ " and " +b+ " is "+sum)
+       }
+       SUM(num1,num2);
+
+
+
+       //function with return type
+       document.write("<br>");
+       let numb1 = 2;
+       let numb2 = 10;
+       function DIFF(a,b){
+        dif = a-b;
+        return dif
+        // return (a-b);
+        
+       }
+       document.write("The diffference is "+DIFF(numb1,numb2));
+    //    let x = DIFF(numb1,numb2);
+
+    </script>
+    <noscript>
+        Sorry th e script is diable by the browser
+    </noscript>
+    <script src="variable_noscript.js"></script>
+</body>
+</html>
